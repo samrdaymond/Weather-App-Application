@@ -1,11 +1,11 @@
 data "aws_ssm_parameter" "vpc_id" {
-  name = "samrdaymond/wa/vpc/vpc_id"
+  name = "/samrdaymond/wa/vpc/vpc_id"
 }
 data "aws_ssm_parameter" "public_sub_a_id" {
-  name = "samrdaymond/wa/vpc/public_sub_a_id"
+  name = "/samrdaymond/wa/vpc/public_sub_a_id"
 }
 data "aws_ssm_parameter" "public_sub_b_id" {
-  name = "samrdaymond/wa/vpc/public_sub_b_id"
+  name = "/samrdaymond/wa/vpc/public_sub_b_id"
 }
 
 module "ecs" {
