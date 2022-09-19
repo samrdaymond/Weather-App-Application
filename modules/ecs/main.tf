@@ -94,8 +94,9 @@ resource "aws_ecs_service" "samrdaymond_wa_ecsservice" {
   name                               = "weather-app-service"
   cluster                            = aws_ecs_cluster.samrdaymond_wa_ecs_cluster.id
   task_definition                    = aws_ecs_task_definition.samrdaymond_wa_ecs_td.arn
-  desired_count                      = 1
+  desired_count                      = 2
   launch_type                        = "FARGATE"
+  scheduling_strategy                = "REPLICA" 
   iam_role                           = aws_iam_role.samrdaymondEcsExecutionRole.arn
 
   network_configuration {
